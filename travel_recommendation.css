@@ -184,3 +184,55 @@ button:active {
   margin-top: 50px;
   font-size: 50px;
 }
+
+.testimonials {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 15px;
+}
+
+.testimonials-grid {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%;
+  padding: 20px;
+}
+
+.testimonials-item {
+  background-color: rgba(244, 244, 244, 0.6);
+  padding: 20px;
+  font-family: 'Karla';
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.testimonials-item > p {
+  font-family: 'Karla';
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.testimonial-detail img {
+  max-width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.role {
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  border: black solid 1px;
+}
