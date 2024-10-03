@@ -296,3 +296,58 @@ textarea {
   font-size: 24px;
   text-align: center;
 }
+
+.overlay-results {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  width: 30%;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.result-item {
+  background-color: rgba(244, 244, 244, 0.6);
+  display: flex;
+  margin-bottom: 20px;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.result-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.result-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-info h3 {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.result-info p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+
+.visit-btn {
+  padding: 8px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}

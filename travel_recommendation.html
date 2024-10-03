@@ -30,11 +30,11 @@
         </li>
       </ul>
       <div class="search-bar">
-        <input type="text" placeholder="Enter destination" />
+        <input id="search-bar" type="text" placeholder="Enter destination" />
         <img src="./assets/search_logo.png" width="20px" height="auto" />
 
-        <button class="search-btn">Search</button>
-        <button class="clear-btn">Clear</button>
+        <button type="submit" class="search-btn" id="search-btn">Search</button>
+        <button class="clear-btn" id="clear-btn">Clear</button>
       </div>
     </nav>
     <main>
@@ -61,7 +61,21 @@
           </p>
           <button class="btn">Book Now</button>
         </div>
+        <div class="overlay-results" id="results-container">
+          <div class="result-item">
+            <img src="sydney.jpg" alt="Sydney, Australia" class="result-img" />
+            <div class="result-info">
+              <h3>Sydney, Australia</h3>
+              <p>
+                A beautiful coastal city with a relaxed atmosphere, featuring
+                the Sydney Opera House, Harbour Bridge, and stunning beaches.
+              </p>
+              <button class="visit-btn">Visit</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./travel_recommendation.js"></script>
   </body>
 </html>
