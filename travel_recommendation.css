@@ -303,9 +303,7 @@ textarea {
   right: 30px;
   width: 30%;
   max-width: 350px;
-  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
 }
 
@@ -316,6 +314,7 @@ textarea {
   border: 2px solid #e1e1e1;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .result-img {

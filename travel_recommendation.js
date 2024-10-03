@@ -111,3 +111,14 @@ function addItemList(imgUrl, name, description) {
 
 const btnSearch = document.getElementById('search-btn')
 btnSearch.onclick = handleSearch
+
+function handleClear() {
+  const resultsContainer = document.getElementById('results-container')
+  const search_input = document.getElementById('search-bar')
+
+  search_input.value = ''
+  resultsContainer.innerHTML = ''
+}
+
+const btnClear = document.getElementById('clear-btn')
+btnClear.onclick = handleClear
