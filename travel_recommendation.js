@@ -1,12 +1,19 @@
 async function handleSearch() {
   const search_input = document.getElementById('search-bar').value
   const url = './travel_recommendation_api.json'
+  const resultsContainer = document.getElementById('results-container')
+
+  resultsContainer.innerHTML = ''
 
   const data = await fetch(url).then((response) => {
     return response.json()
   })
 
   let exit = false
+
+  if (search_input.trim() === '') {
+    return
+  }
 
   Object.keys(data).forEach((key) => {
     {
