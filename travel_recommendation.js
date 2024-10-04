@@ -22,6 +22,8 @@ async function handleSearch() {
           data[key].forEach((country) => {
             country.cities.forEach((city) => {
               addItemList(city.imageUrl, city.name, city.description)
+              const firstWord = city.name.split(',')[0].trim().split(' ')[0]
+              addTime(country.name, firstWord.toLowerCase())
               exit = true
             })
           })
@@ -50,6 +52,8 @@ async function handleSearch() {
     if (country.name.toLowerCase().includes(search_input.toLowerCase())) {
       country.cities.forEach((city) => {
         addItemList(city.imageUrl, city.name, city.description)
+        const firstWord = city.name.split(',')[0].trim().split(' ')[0]
+        addTime(country.name, firstWord.toLowerCase())
         exit = true
       })
     }
@@ -60,7 +64,7 @@ async function handleSearch() {
     country.cities.forEach((city) => {
       if (city.name.toLowerCase().includes(search_input.toLowerCase())) {
         addItemList(city.imageUrl, city.name, city.description)
-        const firstWord = city.name.split(',')[0].trim()
+        const firstWord = city.name.split(',')[0].trim().split(' ')[0]
         addTime(country.name, firstWord.toLowerCase())
         exit = true
       }
@@ -99,7 +103,7 @@ function addItemList(imgUrl, name, description) {
   const resultInfo = document.createElement('div')
   resultInfo.classList.add('result-info')
 
-  const firstWord = name.split(',')[0].trim()
+  const firstWord = name.toLowerCase().split(',')[0].trim().split(' ')[0]
   resultInfo.classList.add(`${firstWord}`)
 
   const h3 = document.createElement('h3')
@@ -139,8 +143,8 @@ const timezoneMap = {
   tokyo: 'Asia/Tokyo',
   melbourne: 'Australia/Melbourne',
   kyoto: 'Asia/Tokyo',
-  /*Rio de Janeiro: 'America/Sao_Paulo',
-  São Paulo: 'America/Sao_Paulo',*/
+  rio: 'America/Sao_Paulo',
+  são: 'America/Sao_Paulo',
 }
 
 function addTime(country, city) {
