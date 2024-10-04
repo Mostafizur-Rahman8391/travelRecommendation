@@ -60,6 +60,8 @@ async function handleSearch() {
     country.cities.forEach((city) => {
       if (city.name.toLowerCase().includes(search_input.toLowerCase())) {
         addItemList(city.imageUrl, city.name, city.description)
+        const firstWord = city.name.split(',')[0].trim()
+        addTime(country.name, firstWord.toLowerCase())
         exit = true
       }
     })
@@ -97,6 +99,9 @@ function addItemList(imgUrl, name, description) {
   const resultInfo = document.createElement('div')
   resultInfo.classList.add('result-info')
 
+  const firstWord = name.split(',')[0].trim()
+  resultInfo.classList.add(`${firstWord}`)
+
   const h3 = document.createElement('h3')
   h3.textContent = name
   resultInfo.appendChild(h3)
@@ -128,3 +133,34 @@ function handleClear() {
 
 const btnClear = document.getElementById('clear-btn')
 btnClear.onclick = handleClear
+
+const timezoneMap = {
+  sydney: 'Australia/Sydney',
+  tokyo: 'Asia/Tokyo',
+  melbourne: 'Australia/Melbourne',
+  kyoto: 'Asia/Tokyo',
+  /*Rio de Janeiro: 'America/Sao_Paulo',
+  São Paulo: 'America/Sao_Paulo',*/
+}
+
+function addTime(country, city) {
+  console.log(city)
+  const resultsContainer = document.querySelector(`.${city}`)
+  console.log(resultsContainer)
+
+  const timezone = timezoneMap[city]
+  console.log(timezone)
+  const options = {
+    timeZone: timezone,
+    hour12: true,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  }
+  const time = new Date().toLocaleTimeString('en-US', options)
+  console.log(time)
+  const p = document.createElement('p')
+  p.textContent = time
+
+  resultsContainer.appendChild(p)
+}
