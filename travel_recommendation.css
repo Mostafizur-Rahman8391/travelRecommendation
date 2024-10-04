@@ -342,11 +342,16 @@ textarea {
 }
 
 .visit-btn {
-  padding: 8px;
-  background-color: #16a085;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  margin-left: 5px;
+  font-size: 12px;
+  border-radius: 50px;
   cursor: pointer;
-  align-self: flex-start;
+  margin: 0 auto;
+}
+
+.visit-btn:hover {
+  background-color: white;
 }
