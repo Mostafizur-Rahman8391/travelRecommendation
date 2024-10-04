@@ -164,7 +164,8 @@ function addTime(country, city) {
   const time = new Date().toLocaleTimeString('en-US', options)
   console.log(time)
   const p = document.createElement('p')
+  p.classList.add('time')
   p.textContent = time
 
-  resultsContainer.appendChild(p)
+  resultsContainer.parentNode.insertBefore(p, resultsContainer)
 }

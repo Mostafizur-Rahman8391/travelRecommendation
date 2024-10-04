@@ -150,7 +150,7 @@ ul li a:hover {
   transform: translateY(-1px);
 }
 
-button:active {
+.btn:active {
   transform: translateY(2px);
 }
 
@@ -244,7 +244,6 @@ button:active {
   margin-right: 35%;
   margin-top: 20px;
   text-align: center;
-  padding: 0;
 }
 
 label {
@@ -333,6 +332,12 @@ textarea {
 .result-info h3 {
   font-size: 18px;
   color: #2c3e50;
+  margin-right: auto;
+}
+
+.result-info .time {
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 .result-info p {
